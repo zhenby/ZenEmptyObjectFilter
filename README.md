@@ -23,7 +23,7 @@ Before:
 	string1 = string1;
 	string2 = "";
 } 
-	
+````	
 After Filter:
 ````objective-c
 {
@@ -33,7 +33,7 @@ After Filter:
 	);
 	string1 = string1;
 }
-
+````
 ##How to Use
 Just Add `ZenEmptyObjectFitler` folder to you project, and import `ZenEmptyObjectFilter.h` in the file that want to use ZenEmptyObjectFilter.  
 ##Two Way to Filter  
@@ -50,7 +50,7 @@ NSMutableDictionary *dictWay1Before = [[NSMutableDictionary new] autorelease];
 [dictWay1Before setObject:@"" forKey:@"string2"];
 [dictWay1Before setObject:[NSNull null] forKey:@"null"];
 NSDictionary *dictWay1After = [ZenEmptyObjectFilter emptyObjectFilter:dictWay1Before];
-
+````
 ###Second one use for filter every object that set to Dictionary or Array  
 Example code:  
 ````objective-c
@@ -63,3 +63,4 @@ NSMutableDictionary *dictWay2After = [[NSMutableDictionary new] autorelease];
 [ZenEmptyObjectFilter setObject:@"string1" forKey:@"string1" toDictionary:&dictWay2After];
 [ZenEmptyObjectFilter setObject:@"" forKey:@"string2" toDictionary:&dictWay2After];
 [ZenEmptyObjectFilter setObject:[NSNull null] forKey:@"null" toDictionary:&dictWay2After];
+````
